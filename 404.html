@@ -25,13 +25,15 @@ permalink: /404.html
 
 <script>
 var htaccess = `
+{% raw %}
 {% include_absolute '.htaccess' %}
+{% endraw %}
 `;
 
 
 function extract_htaccess_redirects(htaccess) {
   const regex = /RewriteRule\s*([^\s]*)\s*([^\s]*)/gm;
-  
+
   var redirects = {};
   var lines = htaccess.split(/\r?\n/);
   for (line of lines) {
