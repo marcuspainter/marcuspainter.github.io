@@ -1,8 +1,0 @@
-# Enable custom routing.
-RewriteEngine On
-
-# Route documentation and tutorial pages.
-RewriteRule ^(documentation|tutorials)\/.*$ /VectorDSP.doccarchive/index.html [L]
-
-# Route files within the documentation archive.
-RewriteRule ^(css|js|data|images|downloads|favicon\.ico|favicon\.svg|img|theme-settings\.json|videos)\/.*$ /VectorDSP.doccarchive/$0 [L]
